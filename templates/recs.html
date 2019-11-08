@@ -10,6 +10,9 @@
         <iframe src="https://embed.spotify.com/?uri={{i['uri']}}" width="400px" height="100px"></iframe>
       </div>
     {% endfor %}
+    <div class="chartbelow">
+      <a href="#">⬇️ View the mood chart below ⬇️</a>
+    </div>
     </div>
     <div class="recin2">
       <div class="new">
@@ -25,9 +28,9 @@
             </div>
           </div>
           {% endfor %}
-          <div class="">
+          <div class="midbut">
             <input type="hidden" id="custId" name="playlist" value="{{li}}">
-            <input type="submit" value="Submit">
+            <button type="submit" class="recbutton">New Recommendations</button>
           </div>
       </form>
     </div>

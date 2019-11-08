@@ -82,3 +82,35 @@
 .chart{
   padding-bottom: 225px;
 }
+.recbutton{
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+
+}
+.recbutton:hover{
+  background-color: white; /* Green */
+  border: 2px solid black;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+
+}
+.midbut{
+  padding-top: 25px;
+  margin-right: 25px;
+  text-align: center;
+}
+.chartbelow{
+  text-align: center;
+  padding-top: 25px;
+  margin-right: 15px;
+}
