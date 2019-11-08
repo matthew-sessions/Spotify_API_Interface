@@ -26,13 +26,8 @@ def recs(value):
     feats = songs[1]
     li = [i['id'] for i in songs[2]]
     name = 'the song you selected.'
-    return(render_template('recs.html', title='Current user',
-                                          search=songs[2],
-                                          graph=graph,
-                                          feats=feats,
-                                          li=li,
-                                          name = name,
-                                          title='Recommendations'))
+    title = "Recommendations"
+    return(render_template('recs.html',search=songs[2],graph=graph,feats=feats,li=li,name = name, title = title))
 
 @app.route('/recs_mood')
 def recs_mood():
@@ -70,13 +65,13 @@ def recs_mood():
     graph = songs[0]['graph_uri']
     feats = songs[1]
     li = [i['id'] for i in songs[2]]
-    return(render_template('recs.html', title='Current user',
+    title='Mood Features'
+    return(render_template('recs.html', title=title,
                                           search=songs[2],
                                           graph=graph,
                                           feats=feats,
                                           li=li,
-                                          name = name,
-                                          title='Mood Features'))
+                                          name = name))
 
 
 if __name__ == '__main__':
