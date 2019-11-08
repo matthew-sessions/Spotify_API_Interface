@@ -11,13 +11,13 @@ CORS(app)
 
 @app.route('/')
 def home():
-    return(render_template('home.html'))
+    return(render_template('home.html', title='Song search'))
 
 @app.route('/search')
 def search():
     name = request.args.get('search')
     songs = song_search(name)
-    return(render_template('search.html', title='Current user', search=songs, name=name))
+    return(render_template('search.html', title='Search results', search=songs, name=name))
 
 @app.route('/recs/<value>')
 def recs(value):
@@ -31,7 +31,8 @@ def recs(value):
                                           graph=graph,
                                           feats=feats,
                                           li=li,
-                                          name = name))
+                                          name = name,
+                                          title='Recommendations'))
 
 @app.route('/recs_mood')
 def recs_mood():
@@ -74,7 +75,8 @@ def recs_mood():
                                           graph=graph,
                                           feats=feats,
                                           li=li,
-                                          name = name))
+                                          name = name,
+                                          title='Mood Features'))
 
 
 if __name__ == '__main__':
