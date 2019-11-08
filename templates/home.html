@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="homecent">
+  <h4>Search for a song</h4>
+  <br>
+  <form class="form-inline my-2 my-lg-0" action="{{url_for('search')}}">
+    <input class="form-control mr-sm-2" name="search" type="search" placeholder="Search for a song" aria-label="Search" style="width:500px">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</div>
+{% endblock %}

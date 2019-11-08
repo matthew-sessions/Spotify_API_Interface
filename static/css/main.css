@@ -1,0 +1,84 @@
+.homecent{
+  width: 600px;
+  height: 300px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.songlist{
+  margin-top: 10;
+}
+.songlist{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 4px;
+  background-color: #f8f9fa;
+  display:inline-block;
+  vertical-align: top;
+}
+.but{
+  margin-bottom: 5x;
+}
+.search{
+  margin-top: 50px;
+}
+.title{
+  text-align: center;
+}
+.btn:hover{
+  background-color: black;
+}
+.recs{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.recin{
+  width: 40%;
+}
+.recin2{
+  width: 60%;
+}
+@media only screen and (max-width: 1000px) {
+  .recin{
+    width: 100%;
+  }
+  .recin2{
+    width: 100%;
+  }
+}
+.mid1{
+  padding-left: 5px;
+  width: 25%;
+  display: block;
+  float: right;
+}
+.mid2{
+  width: 75%;
+  display: block;
+  float: left;
+}
+.mid{
+  height: 30px;
+}
+.me{
+  padding-top: 55px;
+  text-align: center;
+  color: white
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 110px;
+  background-color: grey;
+  color: white;
+  text-align: center;
+}
+.chart{
+  padding-bottom: 225px;
+}

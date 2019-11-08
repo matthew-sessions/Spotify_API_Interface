@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="search">
+  <h3>Recommendations based on {{name}}</h3>
+  <br>
+  <div class="recs">
+    <div class="recin">
+    {% for i in search %}
+      <div class="reclist">
+        <iframe src="https://embed.spotify.com/?uri={{i['uri']}}" width="400px" height="100px"></iframe>
+      </div>
+    {% endfor %}
+    </div>
+    <div class="recin2">
+      <div class="new">
+        <p>You can adjust the mood parameters below and click "New Recommendations" to customize your listening experience. The chart at the bottom of the page displays all the mood features for each recommended song. You can learn more about the song features along with the API that powers this application <a href="https://github.com/bw-spotify-oct/ds">here.</a></p>
+        <form class="multi-range-field my-5 pb-5" style="width:100%" action="/recs_mood">
+          {% for i in feats.items() %}
+          <div class="mid">
+            <div class="mid1">
+              <h6>{{i[0]}}</h6>
+            </div>
+            <div class="mid2">
+              <input  type="range" style="width:100%" min="0" max = "1.5" name="{{i[0]}}" value="{{i[1]}}" step="0.1">
+            </div>
+          </div>
+          {% endfor %}
+          <div class="">
+            <input type="hidden" id="custId" name="playlist" value="{{li}}">
+            <input type="submit" value="Submit">
+          </div>
+      </form>
+    </div>
+    </div>
+  </div>
+  <div class="chart">
+      <embed type="image/svg+xml" src={{graph|safe}} >
+  </div>
+</div>
+
+{% endblock %}
