@@ -82,7 +82,7 @@
 .chart{
   padding-bottom: 225px;
 }
-.recbutton{
+.recbutton:hover{
   background-color: #4CAF50; /* Green */
   border: none;
   color: white;
@@ -93,7 +93,7 @@
   font-size: 16px;
 
 }
-.recbutton:hover{
+.recbutton{
   background-color: white; /* Green */
   border: 2px solid black;
   color: black;
